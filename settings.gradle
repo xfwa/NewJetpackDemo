@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "NewJetpackDemo"
 include ':app'
 include ':lifecycle'
+include ':livedata'
