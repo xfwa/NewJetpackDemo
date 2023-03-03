@@ -12,6 +12,8 @@ import androidx.fragment.app.viewModels
 
 class BlankFragmentB : Fragment() {
 
+
+
     private val viewModel: SharedViewModel by activityViewModels()
 
     override fun onCreateView(

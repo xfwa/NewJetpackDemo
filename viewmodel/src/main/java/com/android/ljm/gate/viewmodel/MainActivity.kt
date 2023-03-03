@@ -35,7 +35,7 @@ import androidx.appcompat.app.AppCompatActivity
  *
  * ViewModel数据共享
  *
- * 想在ViewModel使用到生命周期怎么办
+ * 想在ViewModel使用到Context怎么办
  */
 private const val TAG = "MainActivity"
 
