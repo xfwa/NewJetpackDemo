@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userInfo"
+            type="com.android.ljm.gate.databinding.UserInfo" />
+
+        <variable
+            name="handlers"
+            type="com.android.ljm.gate.databinding.MyHandlers" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{handlers::onClickFriend}"
+            android:text="测试点击事件1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view)-> handlers.onClickFriend(view)}"
+            android:text="测试点击事件2" />
+
+        <Button
+            android:id="@+id/btn_get_userinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取用户信息" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onCheckedChanged="@{(view,isCheck)->handlers.checkBoxClick(view,isCheck)}"
+            android:text="CheckBox测试" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"名字：" + userInfo.name}' />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"年龄：" + userInfo.age}' />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"性别：" + userInfo.sex}' />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{etSearch.text}" />
+
+    </LinearLayout>
+</layout>
