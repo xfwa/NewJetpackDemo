@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/livedata" />
             <option value="$PROJECT_DIR$/viewbinding" />
             <option value="$PROJECT_DIR$/viewmodel" />
+            <option value="$PROJECT_DIR$/workmanager" />
           </set>
         </option>
       </GradleProjectSettings>
